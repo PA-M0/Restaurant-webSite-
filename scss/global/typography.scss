@@ -1,0 +1,28 @@
+@use '../util/px_to_rem' as *;
+h1, h2, h3{
+  line-height: 1.1;
+
+}
+
+a, a:active, a:visited{
+  text-decoration: underline;
+}
+
+h1{
+  font-family: var(--font-special);
+  font-size: rem(64);
+}
+h2{
+  font-family: var(--font-special);
+  font-size: rem(48);
+}
+h3{
+  font-family: var(--font-special);
+  font-size: rem(36);
+
+}
+p{
+  font-family: var(--font-roboto);
+  font-size: rem(18);
+}
+
