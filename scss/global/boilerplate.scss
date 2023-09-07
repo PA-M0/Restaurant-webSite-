@@ -1,9 +1,13 @@
+@use '../util/px_to_rem' as *;
 *{
   box-sizing: border-box;
   font-size: 100%;
 
 }
 body{
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  font-weight: lighter;
   margin: 0;
   padding: 0;
   text-decoration: none;

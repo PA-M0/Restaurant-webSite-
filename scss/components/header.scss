@@ -1,0 +1,20 @@
+@use '../util/px_to_rem' as *;
+.navBar {
+
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+
+    li{
+      margin:0 0 0 rem(40);
+      font-size: 16px;
+      font-weight: lighter;
+    }
+  }
+}

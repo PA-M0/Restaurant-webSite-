@@ -1,0 +1,9 @@
+@use '../util/px_to_rem'as *;
+
+.container{
+
+  max-width: 100%;
+  margin: rem(40) rem(80);
+
+
+}
