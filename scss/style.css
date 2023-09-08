@@ -20,7 +20,10 @@ h1, h2, h3 {
 }
 
 a, a:active, a:visited {
-  text-decoration: underline;
+  text-decoration: none;
+  font-family: var(--font-roboto);
+  font-size: 1rem;
+  color: var(--main_20);
 }
 
 h1 {
@@ -156,6 +159,56 @@ p {
   font-display: swap;
   font-style: normal;
 }
+.menu__cards {
+  margin-top: rem(40);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu__cards .card {
+  border-radius: 10px 10px 0 0;
+  border-bottom-color: var(--main_50);
+  border-bottom-style: solid;
+  border-width: thin;
+  margin: 0 rem(20);
+}
+.menu__cards .card__header img {
+  border-radius: 10px 10px 0 0;
+  height: 450px;
+  width: 280px;
+  cursor: pointer;
+}
+.menu__cards .card__body {
+  text-align: center;
+}
+.menu__cards .card__body h4 {
+  cursor: pointer;
+}
+.menu__cards .rightArrow {
+  align-self: center;
+}
+.menu__cards .rightArrow button {
+  border-radius: 50px;
+  background-color: var(--main_80);
+  border-style: solid;
+  border-color: var(--main_20);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.menu__cards .leftArrow {
+  align-self: center;
+}
+.menu__cards .leftArrow button {
+  border-radius: 50px;
+  background-color: var(--main_80);
+  border-style: solid;
+  border-color: var(--main_20);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
 .navBar {
   margin-top: 2.5rem;
   display: flex;
@@ -251,6 +304,7 @@ header {
   border-radius: 10px 10px 0 0;
   height: 450px;
   width: 280px;
+  cursor: pointer;
 }
 .menu__cards .card__body {
   text-align: center;
@@ -281,6 +335,122 @@ header {
   width: 60px;
   height: 60px;
   cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.info__links {
+  flex-grow: 1;
+}
+.info__links ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.info__links ul li {
+  margin: 0 2.5rem 0 0;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.info__logo {
+  flex-grow: 1;
+  font-family: Gabriola, serif;
+  font-size: 48px;
+  font-weight: bold;
+}
+.info__email {
+  flex-grow: 1;
+}
+.info__email span {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.info__email .wave-group {
+  position: relative;
+}
+.info__email .wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+.info__email .wave-group .input:focus {
+  outline: none;
+}
+.info__email .wave-group .input:focus ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: var(--main_20);
+}
+.info__email .wave-group .input:focus ~ .bar:before {
+  width: 50%;
+}
+.info__email .wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+.info__email .wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: var(--main_20);
+}
+.info__email .wave-group .label {
+  color: var(--main_20);
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+.info__email .wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+.info__email .wave-group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+.info__email .wave-group .bar:before {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--main_20);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  left: 50%;
+}
+.info__email .wave-group .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--main_20);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  right: 50%;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.socialMedia div {
+  margin: 0 7px 0 7px;
 }
 
 /*# sourceMappingURL=style.css.map */

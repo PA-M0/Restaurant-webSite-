@@ -1,0 +1,12 @@
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: red;
+}
+.info__logo {
+  font-family: Gabriola, serif;
+  font-size: 48px;
+}
+
+/*# sourceMappingURL=footer.css.map */

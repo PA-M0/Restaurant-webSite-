@@ -1,1 +1,59 @@
 
+.menu{
+  &__cards{
+    margin-top: rem(40);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .card{
+      border-radius: 10px 10px 0 0;
+      border-bottom-color: var(--main_50);
+      border-bottom-style: solid;
+
+      border-width: thin;
+      margin:0 rem(20);
+      &__header {
+        img {
+          border-radius: 10px 10px 0 0 ;
+          height: 450px;
+          width: 280px;
+          cursor: pointer;
+        }
+      }
+      &__body{
+        text-align: center;
+        h4{
+          cursor: pointer;
+        }
+
+      }
+
+    }
+
+    .rightArrow{
+      align-self:center;
+      button{
+        border-radius: 50px;
+        background-color: var(--main_80);
+        border-style: solid;
+        border-color: var(--main_20);
+        width:60px;
+        height: 60px;
+        cursor: pointer;
+      }
+    }
+    .leftArrow{
+      align-self:center;
+      button{
+        border-radius: 50px;
+        background-color: var(--main_80);
+        border-style: solid;
+        border-color: var(--main_20);
+        width:60px;
+        height: 60px;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
