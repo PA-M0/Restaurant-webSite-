@@ -1,0 +1,38 @@
+@use '../util/px_to_rem' as *;
+@use 'card_style'as *;
+@use 'Buttons' as *;
+.cookingFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+
+  .cookingLeft{
+    order:2;
+    &__title{
+      text-align: center;
+    }
+    &__subtitle{
+      text-align: center;
+    }
+  }
+  .cookingRight{
+    order:1;
+    @extend %create_card;
+    margin-top: rem(40);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @extend %creat_button;
+  }
+}
+.cookingControl{
+  @extend %creat_button;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 50px 0 0;
+}
+.cooking{
+  margin-top:rem(100);
+}
+

@@ -2,6 +2,7 @@
 
 
 # ui/ux
+ui project => Go to ui-ux-design directory, open picture.
 
 * Design sample => https://www.figma.com/community/file/1193059857894596326/Restaurant-Website
 
