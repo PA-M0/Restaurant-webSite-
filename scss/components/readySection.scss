@@ -1,0 +1,30 @@
+@use '../util/px_to_rem' as *;
+@use 'card_style'as *;
+@use 'Buttons' as *;
+.readyFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+
+  .readyLeft{
+
+  }
+  .readyRight{
+    @extend %create_card;
+    margin-top: rem(40);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @extend %creat_button;
+  }
+}
+.readyControl{
+  @extend %creat_button;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0px 50px 0px 0;
+}
+.ready{
+  margin-top:rem(20);
+}

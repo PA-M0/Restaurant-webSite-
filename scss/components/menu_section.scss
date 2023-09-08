@@ -1,92 +1,72 @@
 @use '../util/px_to_rem' as *;
-.menu{
-  margin-top:rem(80);
-  &__title{
+@use 'card_style' as *;
+@use 'Buttons' as *;
+.menu {
+  margin-top: rem(80);
+
+  &__title {
     text-align: center;
   }
-  &__subtitle{
+
+  &__subtitle {
     text-align: center;
-    height:rem(116);
-    width:rem(570);
+    height: rem(116);
+    width: rem(570);
     margin: -30px auto 0;
   }
-  &__category{
-    ul{
+
+  &__category {
+    ul {
       list-style-type: none;
       display: flex;
       flex-direction: row;
       justify-content: center;
 
-      li{
-        margin:0 20px;
+      li {
+        margin: 0 20px;
         border-style: solid;
         padding: rem(16) rem(40);
         border-radius: rem(16);
         border-width: thin;
         cursor: pointer;
       }
-      li:hover{
+
+      li:hover {
         background-color: var(--main_70);
-        border-color:var(--main_70);
+        border-color: var(--main_70);
         transition: background-color 0.3s, border-color 0.3s;
       }
     }
-    }
-  &__cards{
+  }
+
+  &__cards {
+
     margin-top: rem(40);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    .card{
-      border-radius: 10px 10px 0 0;
-      border-bottom-color: var(--main_50);
-      border-bottom-style: solid;
+    @extend %create_card;
+    @extend %creat_button;
 
-      border-width: thin;
-      margin:0 rem(20);
-      &__header {
-        img {
-          border-radius: 10px 10px 0 0 ;
-          height: 450px;
-          width: 280px;
-          cursor: pointer;
-        }
-      }
-    &__body{
-      text-align: center;
-      h4{
-        cursor: pointer;
-      }
 
+    transition: {
+      property: border-width;
+      duration: 0.2s;
     }
 
-    }
-
-    .rightArrow{
-      align-self:center;
-      button{
-        border-radius: 50px;
-        background-color: var(--main_80);
-        border-style: solid;
-        border-color: var(--main_20);
-        width:60px;
-        height: 60px;
-        cursor: pointer;
-      }
-    }
-    .leftArrow{
-      align-self:center;
-      button{
-        border-radius: 50px;
-        background-color: var(--main_80);
-        border-style: solid;
-        border-color: var(--main_20);
-        width:60px;
-        height: 60px;
-        cursor: pointer;
-      }
-    }
 
   }
-
 }
+//.rightArrow, .leftArrow {
+//  align-self: center;
+//
+//  button {
+//    border-radius: 50px;
+//    background-color: var(--main_80);
+//    border-style: solid;
+//    border-color: var(--main_20);
+//    width: 60px;
+//    height: 60px;
+//    cursor: pointer;
+//  }
+//}

@@ -256,6 +256,73 @@ header {
   display: inline-block;
 }
 
+.readyFlex .readyRight .card, .menu__cards .card {
+  border-radius: 10px 10px 0 0;
+  border-bottom-color: var(--main_50);
+  border-bottom-style: solid;
+  border-width: thin;
+  margin: 0 1.25rem;
+}
+.readyFlex .readyRight .card__header, .menu__cards .card__header {
+  position: relative;
+}
+.readyFlex .readyRight .card__header::after, .menu__cards .card__header::after {
+  content: url("/Restaurant-webSite-/images/checkout (3).png");
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 43%;
+  bottom: 50px;
+  z-index: 1000;
+}
+.readyFlex .readyRight .card__header::after:hover, .menu__cards .card__header::after:hover {
+  visibility: visible;
+}
+.readyFlex .readyRight .card__header:hover, .menu__cards .card__header:hover {
+  visibility: visible;
+  z-index: 1000;
+}
+.readyFlex .readyRight .card__header img, .menu__cards .card__header img {
+  border-radius: 10px 10px 0 0;
+  height: 450px;
+  width: 280px;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+.readyFlex .readyRight .card__header img:hover, .menu__cards .card__header img:hover {
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 100;
+}
+.readyFlex .readyRight .card__body, .menu__cards .card__body {
+  text-align: center;
+}
+.readyFlex .readyRight .card__body h4, .menu__cards .card__body h4 {
+  cursor: pointer;
+}
+.readyFlex .readyRight .card:hover, .menu__cards .card:hover {
+  border-bottom-color: var(--main_50);
+  border-bottom-style: solid;
+  border-width: medium;
+}
+
+.readyFlex .readyRight .rightArrow, .readyControl .rightArrow, .menu__cards .rightArrow, .readyFlex .readyRight .leftArrow, .readyControl .leftArrow, .menu__cards .leftArrow {
+  align-self: center;
+}
+.readyFlex .readyRight .rightArrow button, .readyControl .rightArrow button, .menu__cards .rightArrow button, .readyFlex .readyRight .leftArrow button, .readyControl .leftArrow button, .menu__cards .leftArrow button {
+  border-radius: 50px;
+  background-color: var(--main_80);
+  border-style: solid;
+  border-color: var(--main_20);
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  margin: 10px;
+}
+
 .menu {
   margin-top: 5rem;
 }
@@ -292,49 +359,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-.menu__cards .card {
-  border-radius: 10px 10px 0 0;
-  border-bottom-color: var(--main_50);
-  border-bottom-style: solid;
-  border-width: thin;
-  margin: 0 1.25rem;
-}
-.menu__cards .card__header img {
-  border-radius: 10px 10px 0 0;
-  height: 450px;
-  width: 280px;
-  cursor: pointer;
-}
-.menu__cards .card__body {
-  text-align: center;
-}
-.menu__cards .card__body h4 {
-  cursor: pointer;
-}
-.menu__cards .rightArrow {
-  align-self: center;
-}
-.menu__cards .rightArrow button {
-  border-radius: 50px;
-  background-color: var(--main_80);
-  border-style: solid;
-  border-color: var(--main_20);
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-}
-.menu__cards .leftArrow {
-  align-self: center;
-}
-.menu__cards .leftArrow button {
-  border-radius: 50px;
-  background-color: var(--main_80);
-  border-style: solid;
-  border-color: var(--main_20);
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
+  transition-property: border-width;
+  transition-duration: 0.2s;
 }
 
 .info {
@@ -451,6 +477,29 @@ header {
 }
 .socialMedia div {
   margin: 0 7px 0 7px;
+}
+
+.readyFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+}
+.readyFlex .readyRight {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.readyControl {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0px 50px 0px 0;
+}
+
+.ready {
+  margin-top: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

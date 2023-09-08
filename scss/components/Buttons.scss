@@ -1,0 +1,17 @@
+@use '../util/px_to_rem' as *;
+%creat_button {
+  .rightArrow, .leftArrow {
+    align-self: center;
+
+    button {
+      border-radius: 50px;
+      background-color: var(--main_80);
+      border-style: solid;
+      border-color: var(--main_20);
+      width: 55px;
+      height: 55px;
+      cursor: pointer;
+      margin: 10px;
+    }
+  }
+}
