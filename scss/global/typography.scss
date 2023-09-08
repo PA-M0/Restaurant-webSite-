@@ -5,7 +5,10 @@ h1, h2, h3{
 }
 
 a, a:active, a:visited{
-  text-decoration: underline;
+  text-decoration: none;
+  font-family: var(--font-roboto);
+  font-size: rem(16);
+  color: var(--main_20);
 }
 
 h1{
