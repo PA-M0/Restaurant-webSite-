@@ -1,6 +1,6 @@
 @use '../util/px_to_rem' as *;
 .navBar {
-
+  margin-top: rem(40);
   display:flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,3 +18,10 @@
     }
   }
 }
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:85%;
+}
+

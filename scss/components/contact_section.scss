@@ -1,0 +1,25 @@
+@use '../util/px_to_rem'as *;
+
+.contact{
+  display:flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  &__title{
+    margin-left: rem(149);
+    margin-top:rem(180);
+  }
+  &__detail{
+    width:rem(570);
+    height:rem(135);
+    margin-top: rem(250);
+  }
+}
+.image-carousel{
+  div{
+    display: inline-block;
+
+  }
+}
