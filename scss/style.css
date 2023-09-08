@@ -219,6 +219,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 20000;
 }
 .navBar ul {
   list-style-type: none;
@@ -345,9 +346,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .menu__category ul li {
-  margin: 0 20px;
+  margin: 10px 20px;
   border-style: solid;
   padding: 1rem 2.5rem;
   border-radius: 1rem;
@@ -364,8 +366,17 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   transition-property: border-width;
   transition-duration: 0.2s;
+}
+@media (min-width: 40em) {
+  .menu__cards .leftArrow {
+    display: none;
+  }
+  .menu__cards .rightArrow {
+    display: none;
+  }
 }
 
 .info {
@@ -489,11 +500,17 @@ header {
   flex-direction: row;
   justify-content: normal;
 }
+@media (min-width: 40em) {
+  .readyFlex {
+    flex-direction: column;
+  }
+}
 .readyFlex .readyRight {
   margin-top: 2.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .readyControl {
@@ -512,6 +529,11 @@ header {
   flex-direction: row;
   justify-content: normal;
 }
+@media (min-width: 40em) {
+  .cookingFlex {
+    flex-direction: column-reverse;
+  }
+}
 .cookingFlex .cookingLeft {
   order: 2;
 }
@@ -527,6 +549,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .cookingControl {

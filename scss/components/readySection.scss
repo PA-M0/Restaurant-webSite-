@@ -1,12 +1,14 @@
 @use '../util/px_to_rem' as *;
 @use 'card_style'as *;
 @use 'Buttons' as *;
+@use '../util/breakpoints' as *;
 .readyFlex{
   display: flex;
   flex-direction: row;
   justify-content: normal;
 
-  .readyLeft{
+  @include breakpoint(medium) {
+    flex-direction: column;
 
   }
   .readyRight{
@@ -15,7 +17,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     @extend %creat_button;
+
   }
 }
 .readyControl{

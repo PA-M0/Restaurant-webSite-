@@ -1,6 +1,7 @@
 @use '../util/px_to_rem' as *;
 @use 'card_style' as *;
 @use 'Buttons' as *;
+@use '../util/breakpoints'as *;
 .menu {
   margin-top: rem(80);
 
@@ -21,9 +22,11 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      flex-wrap: wrap;
+
 
       li {
-        margin: 0 20px;
+        margin: 10px 20px;
         border-style: solid;
         padding: rem(16) rem(40);
         border-radius: rem(16);
@@ -45,9 +48,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     @extend %create_card;
     @extend %creat_button;
 
+    @include breakpoint(medium) {
+      .leftArrow{
+        display: none;
+      }
+      .rightArrow{
+        display: none;
+      }
+    }
 
     transition: {
       property: border-width;
