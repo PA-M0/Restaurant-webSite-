@@ -38,6 +38,11 @@ h3 {
   font-size: 2.25rem;
 }
 
+h4 {
+  font-family: var(--font-special);
+  font-size: 1.125rem;
+}
+
 p {
   font-family: var(--font-roboto);
   font-size: 1rem;
@@ -174,6 +179,7 @@ header {
   top: 0;
   left: 0;
   width: 88%;
+  background-color: var(--main_80);
 }
 
 .contact {
@@ -221,11 +227,60 @@ header {
   padding: 1rem 2.5rem;
   border-radius: 1rem;
   border-width: thin;
+  cursor: pointer;
 }
 .menu__category ul li:hover {
   background-color: var(--main_70);
   border-color: var(--main_70);
   transition: background-color 0.3s, border-color 0.3s;
+}
+.menu__cards {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu__cards .card {
+  border-radius: 10px 10px 0 0;
+  border-bottom-color: var(--main_50);
+  border-bottom-style: solid;
+  border-width: thin;
+  margin: 0 1.25rem;
+}
+.menu__cards .card__header img {
+  border-radius: 10px 10px 0 0;
+  height: 450px;
+  width: 280px;
+}
+.menu__cards .card__body {
+  text-align: center;
+}
+.menu__cards .card__body h4 {
+  cursor: pointer;
+}
+.menu__cards .rightArrow {
+  align-self: center;
+}
+.menu__cards .rightArrow button {
+  border-radius: 50px;
+  background-color: var(--main_80);
+  border-style: solid;
+  border-color: var(--main_20);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.menu__cards .leftArrow {
+  align-self: center;
+}
+.menu__cards .leftArrow button {
+  border-radius: 50px;
+  background-color: var(--main_80);
+  border-style: solid;
+  border-color: var(--main_20);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
