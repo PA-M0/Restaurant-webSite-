@@ -1,0 +1,35 @@
+@use '../util/px_to_rem' as *;
+.menu{
+  margin-top:rem(80);
+  &__title{
+    text-align: center;
+  }
+  &__subtitle{
+    text-align: center;
+    height:rem(116);
+    width:rem(570);
+    margin: -30px auto 0;
+  }
+  &__category{
+    ul{
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      li{
+        margin:0 20px;
+        border-style: solid;
+        padding: rem(16) rem(40);
+        border-radius: rem(16);
+        border-width: thin;
+
+      }
+      li:hover{
+        background-color: var(--main_70);
+        border-color:var(--main_70);
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+    }
+    }
+}

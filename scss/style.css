@@ -173,7 +173,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 85%;
+  width: 88%;
 }
 
 .contact {
@@ -190,11 +190,42 @@ header {
 .contact__detail {
   width: 35.625rem;
   height: 8.4375rem;
-  margin-top: 15.625rem;
+  margin-top: 11.25rem;
 }
 
 .image-carousel div {
   display: inline-block;
+}
+
+.menu {
+  margin-top: 5rem;
+}
+.menu__title {
+  text-align: center;
+}
+.menu__subtitle {
+  text-align: center;
+  height: 7.25rem;
+  width: 35.625rem;
+  margin: -30px auto 0;
+}
+.menu__category ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menu__category ul li {
+  margin: 0 20px;
+  border-style: solid;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  border-width: thin;
+}
+.menu__category ul li:hover {
+  background-color: var(--main_70);
+  border-color: var(--main_70);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */
