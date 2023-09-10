@@ -219,18 +219,31 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 20000;
 }
-.navBar ul {
+@media (max-width: 39.9375em) {
+  .navBar__menu li {
+    display: none;
+  }
+}
+.navBar__menu {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: normal;
 }
-.navBar ul li {
+.navBar__menu li {
   margin: 0 0 0 2.5rem;
   font-size: 16px;
   font-weight: lighter;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.navBar__menu li:hover {
+  transform: scale(1.1);
+}
+.navBar__logo {
+  font-family: Gabriola, serif;
+  font-size: 48px;
 }
 
 header {
@@ -248,13 +261,26 @@ header {
   align-items: stretch;
   align-content: stretch;
 }
+@media (max-width: 71.8125em) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact__detail {
+    margin-left: 9.3125rem;
+  }
+}
+@media (min-width: 71.875em) {
+  .contact__detail {
+    width: 25rem;
+    height: 12.5rem;
+  }
+}
 .contact__title {
   margin-left: 9.3125rem;
   margin-top: 11.25rem;
 }
 .contact__detail {
-  width: 35.625rem;
-  height: 8.4375rem;
+  max-width: 100%;
   margin-top: 11.25rem;
 }
 
@@ -262,17 +288,21 @@ header {
   display: inline-block;
 }
 
-.cookingFlex .cookingRight .card, .readyFlex .readyRight .card, .menu__cards .card {
+.cooking-flex .cookingRight .card, .readyFlex .readyRight .card, .menu__cards .card {
   border-radius: 10px 10px 0 0;
   border-bottom-color: var(--main_50);
   border-bottom-style: solid;
   border-width: thin;
   margin: 0 1.25rem;
+  transition: all 0.2s;
 }
-.cookingFlex .cookingRight .card__header, .readyFlex .readyRight .card__header, .menu__cards .card__header {
+.cooking-flex .cookingRight .card:hover, .readyFlex .readyRight .card:hover, .menu__cards .card:hover {
+  transform: scale(1.005);
+}
+.cooking-flex .cookingRight .card__header, .readyFlex .readyRight .card__header, .menu__cards .card__header {
   position: relative;
 }
-.cookingFlex .cookingRight .card__header::after, .readyFlex .readyRight .card__header::after, .menu__cards .card__header::after {
+.cooking-flex .cookingRight .card__header::after, .readyFlex .readyRight .card__header::after, .menu__cards .card__header::after {
   content: url("/Restaurant-webSite-/images/checkout (3).png");
   width: 10px;
   height: 10px;
@@ -281,14 +311,14 @@ header {
   bottom: 50px;
   z-index: 1000;
 }
-.cookingFlex .cookingRight .card__header::after:hover, .readyFlex .readyRight .card__header::after:hover, .menu__cards .card__header::after:hover {
+.cooking-flex .cookingRight .card__header::after:hover, .readyFlex .readyRight .card__header::after:hover, .menu__cards .card__header::after:hover {
   visibility: visible;
 }
-.cookingFlex .cookingRight .card__header:hover, .readyFlex .readyRight .card__header:hover, .menu__cards .card__header:hover {
+.cooking-flex .cookingRight .card__header:hover, .readyFlex .readyRight .card__header:hover, .menu__cards .card__header:hover {
   visibility: visible;
   z-index: 1000;
 }
-.cookingFlex .cookingRight .card__header img, .readyFlex .readyRight .card__header img, .menu__cards .card__header img {
+.cooking-flex .cookingRight .card__header img, .readyFlex .readyRight .card__header img, .menu__cards .card__header img {
   border-radius: 10px 10px 0 0;
   height: 450px;
   width: 280px;
@@ -296,29 +326,34 @@ header {
   transition-property: opacity;
   transition-duration: 0.3s;
 }
-.cookingFlex .cookingRight .card__header img:hover, .readyFlex .readyRight .card__header img:hover, .menu__cards .card__header img:hover {
+.cooking-flex .cookingRight .card__header img:hover, .readyFlex .readyRight .card__header img:hover, .menu__cards .card__header img:hover {
   transition-property: opacity;
   transition-duration: 0.3s;
   background-color: #000;
   opacity: 0.8;
   z-index: 100;
 }
-.cookingFlex .cookingRight .card__body, .readyFlex .readyRight .card__body, .menu__cards .card__body {
+.cooking-flex .cookingRight .card__body, .readyFlex .readyRight .card__body, .menu__cards .card__body {
   text-align: center;
 }
-.cookingFlex .cookingRight .card__body h4, .readyFlex .readyRight .card__body h4, .menu__cards .card__body h4 {
+.cooking-flex .cookingRight .card__body h4, .readyFlex .readyRight .card__body h4, .menu__cards .card__body h4 {
   cursor: pointer;
 }
-.cookingFlex .cookingRight .card:hover, .readyFlex .readyRight .card:hover, .menu__cards .card:hover {
+.cooking-flex .cookingRight .card:hover, .readyFlex .readyRight .card:hover, .menu__cards .card:hover {
   border-bottom-color: var(--main_50);
   border-bottom-style: solid;
   border-width: medium;
 }
+@media (min-width: 40em) {
+  .cooking-flex .cookingRight .card, .readyFlex .readyRight .card, .menu__cards .card {
+    margin-bottom: 1.25rem;
+  }
+}
 
-.cookingFlex .cookingRight .rightArrow, .cookingControl .rightArrow, .readyFlex .readyRight .rightArrow, .readyControl .rightArrow, .menu__cards .rightArrow, .cookingFlex .cookingRight .leftArrow, .cookingControl .leftArrow, .readyFlex .readyRight .leftArrow, .readyControl .leftArrow, .menu__cards .leftArrow {
+.cooking-flex .cookingRight .rightArrow, .cookingControl .rightArrow, .readyFlex .readyRight .rightArrow, .readyControl .rightArrow, .menu__cards .rightArrow, .cooking-flex .cookingRight .leftArrow, .cookingControl .leftArrow, .readyFlex .readyRight .leftArrow, .readyControl .leftArrow, .menu__cards .leftArrow {
   align-self: center;
 }
-.cookingFlex .cookingRight .rightArrow button, .cookingControl .rightArrow button, .readyFlex .readyRight .rightArrow button, .readyControl .rightArrow button, .menu__cards .rightArrow button, .cookingFlex .cookingRight .leftArrow button, .cookingControl .leftArrow button, .readyFlex .readyRight .leftArrow button, .readyControl .leftArrow button, .menu__cards .leftArrow button {
+.cooking-flex .cookingRight .rightArrow button, .cookingControl .rightArrow button, .readyFlex .readyRight .rightArrow button, .readyControl .rightArrow button, .menu__cards .rightArrow button, .cooking-flex .cookingRight .leftArrow button, .cookingControl .leftArrow button, .readyFlex .readyRight .leftArrow button, .readyControl .leftArrow button, .menu__cards .leftArrow button {
   border-radius: 50px;
   background-color: var(--main_80);
   border-style: solid;
@@ -327,6 +362,10 @@ header {
   height: 55px;
   cursor: pointer;
   margin: 10px;
+  transition: all 0.2s;
+}
+.cooking-flex .cookingRight .rightArrow button:hover, .cookingControl .rightArrow button:hover, .readyFlex .readyRight .rightArrow button:hover, .readyControl .rightArrow button:hover, .menu__cards .rightArrow button:hover, .cooking-flex .cookingRight .leftArrow button:hover, .cookingControl .leftArrow button:hover, .readyFlex .readyRight .leftArrow button:hover, .readyControl .leftArrow button:hover, .menu__cards .leftArrow button:hover {
+  transform: scale(1.1);
 }
 
 .menu {
@@ -337,9 +376,9 @@ header {
 }
 .menu__subtitle {
   text-align: center;
-  height: 7.25rem;
   width: 35.625rem;
-  margin: -30px auto 0;
+  margin: 0 auto;
+  max-width: 100%;
 }
 .menu__category ul {
   list-style-type: none;
@@ -365,7 +404,7 @@ header {
   margin-top: 2.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   transition-property: border-width;
   transition-duration: 0.2s;
@@ -380,9 +419,23 @@ header {
 }
 
 .info {
+  padding: 1.25rem 0.625rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+@media (min-width: 71.875em) {
+  .info {
+    background-color: var(--main_50);
+    border-radius: 20px;
+  }
+}
+@media (max-width: 71.8125em) {
+  .info {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 .info__links {
   flex-grow: 1;
@@ -397,6 +450,10 @@ header {
   margin: 0 2.5rem 0 0;
   font-size: 16px;
   font-weight: lighter;
+  transition: all 0.2s;
+}
+.info__links ul li:hover {
+  transform: scale(1.1);
 }
 .info__logo {
   flex-grow: 1;
@@ -485,24 +542,28 @@ header {
   -webkit-transition: 0.2s ease all;
   right: 50%;
 }
-
-.socialMedia {
+.info__socialMedia {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
-.socialMedia div {
+.info__socialMedia div {
   margin: 0 7px 0 7px;
+  transition: all 0.2s;
+}
+.info__socialMedia div:hover {
+  transform: scale(1.1);
 }
 
 .readyFlex {
   display: flex;
   flex-direction: row;
   justify-content: normal;
+  flex-wrap: wrap;
 }
-@media (min-width: 40em) {
+@media (max-width: 39.9375em) {
   .readyFlex {
-    flex-direction: column;
+    justify-content: center;
   }
 }
 .readyFlex .readyRight {
@@ -511,40 +572,51 @@ header {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  animation: 1s slide-top;
+}
+@keyframes slide-top {
+  from {
+    margin-top: 50%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+.readyFlex .readyLeft h2 {
+  animation: 1s slide-left;
+}
+@keyframes slide-left {
+  from {
+    margin-left: -50%;
+  }
+  to {
+    margin-left: 0%;
+  }
 }
 
 .readyControl {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 0px 50px 0px 0;
+  margin: 0 50px 0 0;
 }
 
 .ready {
   margin-top: 1.25rem;
 }
 
-.cookingFlex {
+.cooking-flex {
   display: flex;
   flex-direction: row;
   justify-content: normal;
+  flex-wrap: wrap;
 }
-@media (min-width: 40em) {
-  .cookingFlex {
-    flex-direction: column-reverse;
+@media (max-width: 39.9375em) {
+  .cooking-flex {
+    justify-content: center;
   }
 }
-.cookingFlex .cookingLeft {
-  order: 2;
-}
-.cookingFlex .cookingLeft__title {
-  text-align: center;
-}
-.cookingFlex .cookingLeft__subtitle {
-  text-align: center;
-}
-.cookingFlex .cookingRight {
-  order: 1;
+.cooking-flex .cookingRight {
   margin-top: 2.5rem;
   display: flex;
   flex-direction: row;
@@ -555,12 +627,12 @@ header {
 .cookingControl {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin: 0 50px 0 0;
 }
 
 .cooking {
-  margin-top: 6.25rem;
+  margin-top: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

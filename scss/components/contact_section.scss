@@ -1,20 +1,38 @@
 @use '../util/px_to_rem'as *;
+@use '../util/breakpoints'as *;
 
 .contact{
   display:flex;
   flex-direction: row;
-
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
+  @include breakpoint-down(medium){
+    flex-direction: column;
+    &__detail{
+      margin-left: rem(149);
+
+
+
+    }
+  }
+ @include breakpoint(large){
+   &__detail{
+     width: rem(400);
+     height: rem(200);
+   }
+
+ }
+
   &__title{
     margin-left: rem(149);
     margin-top:rem(180);
+
   }
   &__detail{
-    width:rem(570);
-    height:rem(135);
+    max-width: 100%;
     margin-top: rem(180);
+
   }
 }
 .image-carousel{

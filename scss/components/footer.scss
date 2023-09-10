@@ -1,9 +1,20 @@
 @use '../util/px_to_rem'as *;
+@use '../util/breakpoints'as *;
 
 .info{
+  padding: rem(20) rem(10) ;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+ @include breakpoint(large){
+   background-color: var(--main_50);
+   border-radius: 20px;
+ }
+  @include breakpoint_down(medium){
+      flex-direction: column;
+    justify-content: space-evenly;
+      align-items: center;
+  }
 
   &__links{
     flex-grow: 1;
@@ -17,7 +28,10 @@
         margin:0 rem(40) 0 0;
         font-size: 16px;
         font-weight: lighter;
-
+        transition: all 0.2s;
+        &:hover{
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -123,13 +137,17 @@
     }
 
   }
-}
-.socialMedia{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  div{
-    margin: 0 7px 0 7px;
+  &__socialMedia{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    div{
+      margin: 0 7px 0 7px;
+      transition: all 0.2s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
 
   }
 }

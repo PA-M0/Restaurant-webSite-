@@ -1,4 +1,5 @@
 @use '../util/px_to_rem' as *;
+@use '../util/breakpoints' as *;
 %create_card {
 
   .card {
@@ -8,6 +9,10 @@
     border-width: thin;
     margin: 0 rem(20);
 
+    transition: all 0.2s;
+    &:hover{
+      transform: scale(1.005);
+    }
     &__header {
       position: relative;
 
@@ -69,7 +74,10 @@
       border-width: medium;
     }
 
+    @include breakpoint(medium) {
+      margin-bottom: rem(20);
 
+    }
   }
 
 }

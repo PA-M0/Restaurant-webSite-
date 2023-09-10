@@ -2,26 +2,17 @@
 @use 'card_style'as *;
 @use 'Buttons' as *;
 @use '../util/breakpoints' as *;
-
-.cookingFlex{
+.cooking-flex{
   display: flex;
   flex-direction: row;
   justify-content: normal;
-  @include breakpoint(medium) {
-    flex-direction: column-reverse;
+  flex-wrap: wrap;
 
+  @include breakpoint_down(small){
+    justify-content: center;
   }
-  .cookingLeft{
-    order:2;
-    &__title{
-      text-align: center;
-    }
-    &__subtitle{
-      text-align: center;
-    }
-  }
+
   .cookingRight{
-    order:1;
     @extend %create_card;
     margin-top: rem(40);
     display: flex;
@@ -29,16 +20,16 @@
     justify-content: space-around;
     flex-wrap: wrap;
     @extend %creat_button;
+
   }
 }
 .cookingControl{
   @extend %creat_button;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin: 0 50px 0 0;
 }
 .cooking{
-  margin-top:rem(100);
+  margin-top:rem(20);
 }
-

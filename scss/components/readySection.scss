@@ -6,11 +6,12 @@
   display: flex;
   flex-direction: row;
   justify-content: normal;
+  flex-wrap: wrap;
 
-  @include breakpoint(medium) {
-    flex-direction: column;
-
+  @include breakpoint_down(small){
+    justify-content: center;
   }
+
   .readyRight{
     @extend %create_card;
     margin-top: rem(40);
@@ -19,7 +20,29 @@
     justify-content: space-around;
     flex-wrap: wrap;
     @extend %creat_button;
+    animation: 1s slide-top;
+    @keyframes slide-top {
+      from {
+        margin-top: 50%;
+      }
+      to {
+        margin-top: 0%;
+      }
+    }
+  }
+  .readyLeft{
+    h2{
+      animation: 1s slide-left;
+    }
 
+    @keyframes slide-left {
+      from {
+        margin-left: -50%;
+      }
+      to {
+        margin-left: 0%;
+      }
+    }
   }
 }
 .readyControl{
@@ -27,7 +50,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 0px 50px 0px 0;
+  margin: 0 50px 0 0;
 }
 .ready{
   margin-top:rem(20);
