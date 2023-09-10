@@ -11,9 +11,6 @@
     flex-direction: column;
     &__detail{
       margin-left: rem(149);
-
-
-
     }
   }
  @include breakpoint(large){
@@ -27,13 +24,31 @@
   &__title{
     margin-left: rem(149);
     margin-top:rem(180);
-
+    animation: 1s slide-right;
+    @keyframes slide-right {
+      from {
+        margin-left: -100%;
+      }
+      to {
+        margin-left: 11%;
+      }
+    }
   }
   &__detail{
     max-width: 100%;
     margin-top: rem(180);
+    animation: 1s slide-left;
+    @keyframes slide-left {
+      from {
+        margin-right: -100%;
+      }
+      to {
+        margin-right: 0%;
+      }
+    }
 
   }
+
 }
 .image-carousel{
   div{

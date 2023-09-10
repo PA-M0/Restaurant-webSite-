@@ -278,10 +278,28 @@ header {
 .contact__title {
   margin-left: 9.3125rem;
   margin-top: 11.25rem;
+  animation: 1s slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 11%;
+  }
 }
 .contact__detail {
   max-width: 100%;
   margin-top: 11.25rem;
+  animation: 1s slide-left;
+}
+@keyframes slide-left {
+  from {
+    margin-right: -100%;
+  }
+  to {
+    margin-right: 0%;
+  }
 }
 
 .image-carousel div {
@@ -572,26 +590,6 @@ header {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  animation: 1s slide-top;
-}
-@keyframes slide-top {
-  from {
-    margin-top: 50%;
-  }
-  to {
-    margin-top: 0%;
-  }
-}
-.readyFlex .readyLeft h2 {
-  animation: 1s slide-left;
-}
-@keyframes slide-left {
-  from {
-    margin-left: -50%;
-  }
-  to {
-    margin-left: 0%;
-  }
 }
 
 .readyControl {
@@ -633,6 +631,18 @@ header {
 
 .cooking {
   margin-top: 1.25rem;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
